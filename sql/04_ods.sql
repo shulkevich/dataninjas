@@ -10,5 +10,6 @@ create table ods.events (
     event_type varchar,
     -- ссылка на струницу, откуда пользователь пришел
     page_url varchar,
-    user_custom_id varchar
+    user_custom_id varchar,
+    referer_url varchar
 );

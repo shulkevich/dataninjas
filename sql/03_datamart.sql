@@ -28,5 +28,6 @@ drop table if exists datamart.t_03_top_links;
 
 create table datamart.t_03_top_links (
     id integer primary key,
-    page_url varchar
+    referer_url varchar,
+    event_count integer
 );

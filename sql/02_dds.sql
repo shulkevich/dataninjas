@@ -10,6 +10,8 @@ create table dds.events (
     hour integer,
     -- суррогатный тип события  (pageview, purchase)
     event_type varchar,
-    -- ссылка на струницу, откуда пользователь пришел
-    page_url varchar
+    -- предыдущее событие
+    prior_event_type varchar,
+    -- ссылка на страницу, откуда пользователь пришел
+    referer_url varchar
 );
