@@ -1,7 +1,7 @@
 
 drop table if exists staging.events;
 
-create table staging.events {
+create table staging.events (
 	id serial primary key,
 --	2020-07-05 14:32:45.407110
 	event_timestamp timestamp, 
@@ -30,9 +30,9 @@ create table staging.events {
 --  b6b1a8ad-88ca-4fc7-b269-6c9efbbdad55
 	click_id varchar,
 --  -25.54073
-	geo_latitude double,
+	geo_latitude double precision,
 --  152.70493
-	geo_longitude double,
+	geo_longitude double precision,
 --  AU
 	geo_country varchar,
 --  Australia/Brisbsane
@@ -61,5 +61,5 @@ create table staging.events {
 	user_custom_id varchar,
 --  3d648067-9088-4d7e-ad32-45d009e8246a
 	user_domain_id varchar
-};
+);
 
