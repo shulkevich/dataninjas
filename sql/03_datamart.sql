@@ -36,5 +36,15 @@ drop view if exists datamart.t_03_top_links;
 create view datamart.t_03_top_links
 as
 select
+    referer_url,
+    count(*) as purchase_count
+group by
+    referer_url
+where
+    event_type = 'payment'
+order by
+    purchase_count desc
 from
-    dds.events;
+    dds.events
+limit 10
+;
