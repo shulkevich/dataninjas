@@ -10,7 +10,9 @@ select
     event_type,
     count(*) as event_count
 from
-    dds.events;
+    dds.events
+group by
+   "hour", event_type;
 
 
 -- 2. количество купленных товаров в разрезе часа;
@@ -38,13 +40,13 @@ as
 select
     referer_url,
     count(*) as purchase_count
-group by
-    referer_url
-where
-    event_type = 'payment'
-order by
-    purchase_count desc
 from
     dds.events
+where
+    event_type = 'payment'
+group by
+    referer_url    
+order by
+    purchase_count desc    
 limit 10
 ;
