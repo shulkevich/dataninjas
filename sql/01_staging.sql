@@ -3,6 +3,7 @@ drop table if exists staging.events;
 
 create table staging.events (
 	id serial primary key,
+    event_id varchar,
 --	2020-07-05 14:32:45.407110
 	event_timestamp timestamp, 
 --	pageview	
@@ -48,7 +49,7 @@ create table staging.events (
 --  tn_ZA
 	browser_language varchar,
 --  2.0.1
-	osAndroid varchar,
+	os varchar,
 --  Android
 	os_name varchar,
 --  Australia/Brisbane
