@@ -15,6 +15,7 @@ def spark_init(task_name : str) -> SparkSession:
         .master("local")\
         .appName(task_name)\
         .config("spark.jars.packages", spark_jars_packages)\
+        .config('spark.sql.debug.maxToStringFields', 2000) \
         .getOrCreate()
 
     return spark
