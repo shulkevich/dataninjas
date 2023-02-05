@@ -2,6 +2,10 @@ drop schema if exists staging;
 
 create schema staging;
 
+drop schema if exists ods;
+
+create schema ods;
+
 drop schema if exists dds;
 
 create schema dds;
