@@ -1,5 +1,7 @@
 
 
+drop table if exists dds.events;
+
 create table dds.events {
     id serial primary key,
     --	2020-07-05 14:32:45.407110
